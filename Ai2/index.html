@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass/Fail Exam Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pass/Fail Exam Prediction</h1>
+        <form id="dataForm">
+            <label for="math">Math Score:</label>
+            <input type="number" id="math" name="math" required>
+            <label for="science">Science Score:</label>
+            <input type="number" id="science" name="science" required>
+            <label for="english">English Score:</label>
+            <input type="number" id="english" name="english" required>
+            <label for="accuracyThreshold">Desired Accuracy (%):</label>
+            <input type="text" id="accuracyThreshold" value="80">
+            <label for="learningRate">Learning Rate:</label>
+            <input type="number" step="0.01" id="learningRate" name="learningRate" value="0.01" required>
+            <label for="epochs">Maximum Epochs:</label>
+            <input type="number" id="epochs" name="epochs" value="100" required>
+            <button type="button" onclick="trainModel()">Train Model</button>
+            <button type="button" onclick="testModel()">Test Model</button>
+        </form>
+        <div id="results">
+            <h2>Results</h2>
+            <p id="accuracy"></p>
+            <p id="prediction"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
